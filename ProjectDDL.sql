@@ -14,25 +14,25 @@ CREATE TABLE user (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE tweets (
-  tid int,
+  tid bigint,
   textbody VARCHAR(240),
   retweet_count int NOT NULL,
   retweeted int NOT NULL,
-  posted TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  posting_user VARCHAR(45) NOT NULL,
+  posted datetime,
+  posting_user VARCHAR(80) NOT NULL,
   foreign key (posting_user) references user(screen_name),
   PRIMARY KEY  (tid)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE tagged (
-  tid int,
+  tid bigint,
   hashtagname VARCHAR(80),
   foreign key (tid) references tweets(tid),
   PRIMARY KEY  (tid, hashtagname)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE mentioned (
-  tid int,
+  tid bigint,
   screen_name VARCHAR(80),
   foreign key (tid) references tweets(tid),
   foreign key (screen_name) references user(screen_name),
@@ -40,7 +40,7 @@ CREATE TABLE mentioned (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE urlused (
-  tid int,
+  tid bigint,
   url VARCHAR(80),
   foreign key (tid) references tweets(tid),
   PRIMARY KEY  (tid, url)
