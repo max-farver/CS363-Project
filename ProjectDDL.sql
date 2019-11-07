@@ -18,7 +18,10 @@ CREATE TABLE tweets (
   textbody VARCHAR(240),
   retweet_count int NOT NULL,
   retweeted int NOT NULL,
-  posted datetime,
+  created_at datetime,
+  theDay int,
+  theMonth int,
+  theYear int,
   posting_user VARCHAR(80) NOT NULL,
   foreign key (posting_user) references user(screen_name),
   PRIMARY KEY  (tid)
@@ -41,7 +44,7 @@ CREATE TABLE mentioned (
 
 CREATE TABLE urlused (
   tid bigint,
-  url VARCHAR(80),
+  url VARCHAR(500),
   foreign key (tid) references tweets(tid),
   PRIMARY KEY  (tid, url)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
