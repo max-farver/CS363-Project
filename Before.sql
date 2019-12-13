@@ -80,3 +80,15 @@ inner join urlused url on url.tid = t.tid
 where u.sub_category like '%GOP%' and t.theMonth = 1 and t.theYear = 2016
 group by u.screen_name;
 
+-- Q18
+-- Find k users who were mentioned the most in tweets of users of a given party in a given month of a given year. Show 
+-- the user’s screen name, user’s state, and the list of the screen name of the user(s) 
+-- who mentioned this user in descending order of the number of tweets mentioning this user.
+select u1.screen_name, u1.ofstate, GROUP_CONCAT(distinct u2.screen_name SEPARATOR ',') as list_of_mentions
+from user u1 inner join mentioned on u1.screen_name = mentioned.screen_name
+inner join tweets on tweets.tid = mentioned.tid
+inner join user u2 on u2.screen_name = tweets.posting_user
+where u2.sub_category like '%GOP%' and tweets.theMonth = 1 and tweets.theYear = 2016
+group by u1.screen_name
+order by count(mentioned.screen_name) desc
+limit 5;
