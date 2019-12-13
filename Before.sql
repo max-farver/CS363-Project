@@ -92,3 +92,14 @@ where u2.sub_category like '%GOP%' and tweets.theMonth = 1 and tweets.theYear = 
 group by u1.screen_name
 order by count(mentioned.screen_name) desc
 limit 5;
+
+-- Q23
+-- Find k most used hashtags with the count of tweets it appeared posted by a given
+-- sub-category of users in a list of months. Show the hashtag name and the count in descending order of the count
+select tag.hashtagname, count(t.tid) as num_uses, t.theMonth as month_posted
+from tagged tag inner join tweets t on tag.tid = t.tid
+inner join user on t.posting_user = user.screen_name
+where user.sub_category like '%GOP%' and t.theYear = 2016 
+and (t.theMonth = 1 or t.theMonth = 2 or t.theMonth = 3)
+group by tag.hashtagname
+order by num_uses desc limit 5;
