@@ -103,3 +103,50 @@ where user.sub_category like '%GOP%' and t.theYear = 2016
 and (t.theMonth = 1 or t.theMonth = 2 or t.theMonth = 3)
 group by tag.hashtagname
 order by num_uses desc limit 5;
+                                                                                        
+
+                                                                                        
+-- Delete 
+
+Delete user, mentioned, tweets, tagged, urlused
+from user inner join tweets on user.screen_name = tweets.posting_user
+inner join mentioned on tweets.tid = mentioned.tid
+inner join tagged on tweets.tid = tagged.tid
+inner join urlused on tweets.tid = urlused.tid
+where user.screen_name like '%OhioSenateGOP%';
+
+Delete user, mentioned, tweets, tagged
+from user inner join tweets on user.screen_name = tweets.posting_user
+inner join mentioned on tweets.tid = mentioned.tid
+inner join tagged on tweets.tid = tagged.tid
+where user.screen_name like '%OhioSenateGOP%';
+
+Delete user, mentioned, tweets, urlused
+from user inner join tweets on user.screen_name = tweets.posting_user
+inner join mentioned on tweets.tid = mentioned.tid
+inner join urlused on tweets.tid = urlused.tid
+where user.screen_name like '%OhioSenateGOP%';
+
+Delete user, tagged, tweets, urlused
+from user inner join tweets on user.screen_name = tweets.posting_user
+inner join tagged on tweets.tid = tagged.tid
+inner join urlused on tweets.tid = urlused.tid
+where user.screen_name like '%OhioSenateGOP%';
+
+Delete tweets, mentioned
+from tweets inner join mentioned on tweets.tid = mentioned.tid
+where tweets.posting_user like '%OhioSenateGOP%';
+
+Delete tweets, urlused
+from tweets inner join urlused on tweets.tid = urlused.tid
+where tweets.posting_user like '%OhioSenateGOP%';
+
+Delete tweets, tagged
+from tweets inner join tagged on tweets.tid = tagged.tid
+where tweets.posting_user like '%OhioSenateGOP%';
+
+Delete from tweets
+where tweets.posting_user like '%OhioSenateGOP%';
+
+Delete from user
+where screen_name like '%OhioSenateGOP%';
