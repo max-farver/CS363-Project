@@ -1,4 +1,4 @@
-use political_tweets;
+use group5;
 
 create index q1 on tweets(theYear);
 select * from tweets where theYear = 2016;
