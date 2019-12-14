@@ -1,4 +1,4 @@
-use political_tweets;
+use group5;
 
 SET FOREIGN_KEY_CHECKS = 0;
 

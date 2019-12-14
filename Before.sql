@@ -107,7 +107,7 @@ order by num_uses desc limit 5;
 
                                                                                         
 -- Delete 
-
+SET FOREIGN_KEY_CHECKS = 0;
 Delete user, mentioned, tweets, tagged, urlused
 from user inner join tweets on user.screen_name = tweets.posting_user
 inner join mentioned on tweets.tid = mentioned.tid

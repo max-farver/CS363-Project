@@ -1,5 +1,7 @@
 use group5;
 
+SET SQL_SAFE_UPDATES = 0;
+
 UPDATE user
 SET ofstate = 'Florida'
 WHERE ofstate = 'FL';
