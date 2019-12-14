@@ -1,4 +1,4 @@
-use political_tweets;
+use group5;
 
 create table appuser (name VARCHAR(50), pwd VARCHAR(50) NOT NULL, privilege VARCHAR(8), PRIMARY KEY(name));
 
