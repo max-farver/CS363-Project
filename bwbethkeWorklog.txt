@@ -1,0 +1,16 @@
+Individual Worklog
+
+November 4th (1 hour)
+	Rough draft of the ER diagram
+
+November 5th (30 minutes)
+	Worked on adding more to the rough draft of the ER Diagram
+
+November 6th (1 hour)
+	Worked on the ER diagrams
+
+November 23rd (1 hour)
+	Still working on insert statements with little success
+
+December 12th (3 hours)
+	Worked with Tim on getting the SQL queries done and integrated into JSP
