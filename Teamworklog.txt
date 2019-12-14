@@ -1,0 +1,32 @@
+Teamlog
+
+October 1st - Team meeting (1 hour)
+	All members present
+	Design ER Diagram
+	Design Relational Schema
+	Plan for next week
+	
+November 5th - Team meeting (2 hours)
+	All members present
+	Finish ER Diagram design
+	Write DDL for database
+	Write Insert statements for database
+	Write CreateDBUsers and CreateApplicationUsers files 
+	
+November 21st - Team Meeting (1 hour)
+	All members present
+	Review Feedback for part 1
+	Plan to fix Inserts from part 1
+	
+December 10th - Team Meeting (3 hours)
+	All members present
+	Fixed Inserts from part 1
+	Began writing SQL queries for part 2
+	
+December 13th - Team Meeting (4 hours)
+	All members present
+	Finish writing SQL queries
+	Write JSP for queries to use in application
+	Create indexes to optimize query runtime
+	Setup all files for part 2 
+	Finish the project
