@@ -1,4 +1,4 @@
-use political_tweets;
+use group5;
 
 UPDATE user
 SET ofstate = 'Florida'
