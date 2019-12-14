@@ -1,0 +1,19 @@
+Individual Worklog
+
+November 4th (2 hours)
+	Drew up a few rough drafts of the ER diagram
+	
+November 5th (1 hour)
+	Worked on the ProjectDDL script
+
+December 4th (3 hours)
+	Started on the JSP pages
+
+December 8th (3 hours)
+	More work on the JSP pages
+
+December 10th (3 hours)
+	Started creating jsp pages and adding procedures for being called
+	
+December 12th (3 hours)
+	Worked more on procedures and some JSP
