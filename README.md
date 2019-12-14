@@ -6,10 +6,15 @@
 
 ## Sql scripts to execute (we changed almost everything)
 1 - ProjectDDL.sql
+
 2 - ProjectInsert.sql
+
 3 - Procedures.sql
+
 4 - CreateDBUsers.sql
+
 5 - CreateApplicationUsers.sql
+
 6 - UpdateAbbreviations.sql
 
 
