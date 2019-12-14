@@ -1,4 +1,4 @@
-use political_tweets;
+use group5;
 
 -- Question 1
 -- Inputs are month, year, number of tweets to return
