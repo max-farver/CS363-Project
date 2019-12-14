@@ -1,0 +1,15 @@
+Individual Worklog
+
+November 6th (1 hour)
+	Started mapping out ER diagram basics
+	
+November 22nd (1 hour)
+	Tried to fix the insert statements, not much success
+
+December 9th (2 hours)
+	Worked on getting the SQL queries 
+	
+December 12th (3 hours)
+	More work on the SQL queries
+	Worked with Brett to get JSP done
+	
